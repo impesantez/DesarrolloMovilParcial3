@@ -1,7 +1,16 @@
 {
   "name": "AsistenciaApp",
+  "type": "react-vite",
   "integrations": {
     "capacitor": {}
   },
-  "type": "react-vite"
+  "server": {
+    "proxy": {
+      "/api": {
+        "target": "https://puce.estudioika.com",
+        "changeOrigin": true,
+        "secure": false
+      }
+    }
+  }
 }
